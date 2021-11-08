@@ -5,92 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- header start -->
-    <header>
-      <nav>
-        <a href="./index.html">Logo</a>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Blogs</a></li>
-        </ul>
-      </nav>
+    <div class="bg-color">
+      <div class="header-container container">
+        <header class="header">
+          <nav class="nav">
+            <a class="nav-logo" href="./index.html">logo</a>
+            <ul class="nav-list">
+              <li class="nav-item"><a class="nav-item-link" href="">Home</a></li>
+              <li class="nav-item"><a class="nav-item-link" href="">About Us</a></li>
+              <li class="nav-item">
+                <a class="nav-item-link" href="">Services</a>
+              </li>
+              <li class="nav-item"><a class="nav-item-link" href="">Blogs</a></li>
+            </ul>
+          </nav>
 
-      <button type="button">Gift Finder</button>
-    </header>
+          <a class="nav-btn btn" href="">Gift Finder</a>
+        </header>
+      </div>
+    </div>
     <!-- header end -->
     <main>
       <!-- hero start -->
       <section>
-        <ul>
-          <li>
-            <h1>Find a gift for your wife or girlfriend</h1>
-            <p>Struggling to find a gift for your wife or girlfriend? No problem!</p>
-            <a href="">Find gift now</a>
-            <img src="./images/hero-1.jpg" alt="happy couple" />
+        <ul class="hero">
+          <li class="hero-item">
+            <div class="hero-inner">
+              <div class="hero-box">
+                <h1 class="hero-title">Find a gift for your wife or girlfriend</h1>
+                <p class="hero-text text">
+                  Struggling to find a gift for your wife or girlfriend? No problem!
+                </p>
+                <a class="hero-btn btn" href="">Find gift now</a>
+              </div>
+            </div>
+            <img class="hero-img" src="./images/hero-1.jpg" alt="happy couple" width="719" />
           </li>
 
-          <li>
-            <img src="./images/hero-2.jpg" alt="business card in hand" />
-            <h2>How we work</h2>
-            <p>
-              We’ve actually already asked hundreds of women what they want, and made a database
-              with the results. All you have to do is take our short survey that only takes seconds,
-              and our proprietary algorithm will match you with a few perfect gift options.
-            </p>
-            <a href="">Learn More</a>
+          <li class="hero-item">
+            <img
+              class="hero-sab-img"
+              src="./images/hero-2.jpg"
+              alt="business card in hand"
+              width="721"
+            />
+            <div class="hero-sab-inner">
+              <div class="hero-sab-box">
+                <h2 class="hero-sab-title">How we work</h2>
+                <p class="hero-text sab-text">
+                  We’ve actually already asked hundreds of women what they want, and made a database
+                  with the results. All you have to do is take our short survey that only takes
+                  seconds, and our proprietary algorithm will match you with a few perfect gift
+                  options.
+                </p>
+                <a class="hero-sab-btn btn" href="">Learn More</a>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
       <!-- hero end -->
 
       <!-- gift start -->
-      <section>
-        <h2>Gifts for all Occasions</h2>
-        <p>“Try our web app to find the best gifts for all occasions”</p>
-        <ul>
-          <li>
-            <img src="./images/gifts-1.jpg" alt="Birthday" />
-            <h3>Birthday</h3>
-            <a href="">See More</a>
-          </li>
+      <section class="gift-container container">
+        <div class="gift-content">
+          <h2 class="gift-title">Gifts for all Occasions</h2>
+          <p class="gift-text">“Try our web app to find the best gifts for all occasions”</p>
+          <ul class="gift-inner">
+            <li class="gift-item">
+              <img class="gift-img" src="./images/gifts-1.jpg" alt="Birthday" width="270" />
+              <div class="gift-box">
+                <h3 class="gift-item-title">Birthday</h3>
+                <a class="gift-link" href="">See More</a>
+              </div>
+            </li>
 
-          <li>
-            <img src="./images/gifts-2.jpg" alt="Anniversary" />
-            <h3>Anniversary</h3>
-            <a href="">See More</a>
-          </li>
+            <li class="gift-item">
+              <img class="gift-img" src="./images/gifts-2.jpg" alt="Anniversary" width="270" />
+              <div class="gift-box">
+                <h3 class="gift-item-title">Anniversary</h3>
+                <a class="gift-link" href="">See More</a>
+              </div>
+            </li>
 
-          <li>
-            <img src="./images/gifts-3.jpg" alt="Valentine's Day" />
-            <h3>Valentine's Day</h3>
-            <a href="">See More</a>
-          </li>
+            <li class="gift-item">
+              <img class="gift-img" src="./images/gifts-3.jpg" alt="Valentine's Day" width="270" />
+              <div class="gift-box">
+                <h3 class="gift-item-title">Valentine's Day</h3>
+                <a class="gift-link" href="">See More</a>
+              </div>
+            </li>
 
-          <li>
-            <img src="./images/gifts-4.jpg" alt="Christmas" />
-            <h3>Christmas</h3>
-            <a href="">See More</a>
-          </li>
-        </ul>
+            <li class="gift-item">
+              <img class="gift-img" src="./images/gifts-4.jpg" alt="Christmas" width="270" />
+              <div class="gift-box">
+                <h3 class="gift-item-title">Christmas</h3>
+                <a class="gift-link" href="">See More</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- gift end -->
       <!-- signup start -->
-      <section>
-        <h2>Ready to get started?</h2>
-        <p>Sign up or contact us</p>
+      <section class="signup">
+        <div class="signup-container container">
+          <div class="signup-inner">
+            <div class="signup-content">
+              <h2 class="signup-title">Ready to get started?</h2>
+              <p class="signup-text">Sign up or contact us</p>
+            </div>
 
-        <ul>
-          <li>
-            <a href="">Find gift now</a>
-          </li>
-          <li>
-            <a href="">how it works</a>
-          </li>
-        </ul>
+            <ul class="signup-box">
+              <li class="signup-item">
+                <a class="signup-link" href="">Find gift now</a>
+              </li>
+
+              <li class="signup-item">
+                <a class="signup-link" href="">how it works</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <!-- signup end -->
 

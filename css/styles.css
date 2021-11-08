@@ -1,0 +1,296 @@
+:root {
+  --main-bg-color: #fafafa;
+  --accent-color: #f7941e;
+  --second-bg-color: #ffffff;
+  --third-bg-color: #fafafa;
+  --text-color: #000000;
+  --second-text-color: #ffffff;
+  --logo-color: #231f20;
+  --btn-bg-color: #231f20;
+  --btn-text-color: #ffffff;
+  --hero-bg-color: #f1f1f2;
+}
+
+body {
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+
+  font-family: 'Gilroy';
+  font-size: 18px;
+  line-height: 1.38;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+
+  color: var(--accent-color);
+
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nav-btn:hover,
+.hero-btn:hover,
+.hero-sab-btn:hover,
+.nav-btn:focus,
+.hero-btn:focus,
+.hero-sab-btn:focus {
+  color: var(--second-text-color);
+  background-color: var(--accent-color);
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* header start */
+.bg-color {
+  background-color: var(--main-bg-color);
+}
+
+.header-container {
+  width: 1325px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  margin-right: 433px;
+
+  color: var(--logo-color);
+
+  font-family: 'Homemade Apple';
+  font-size: 18px;
+  line-height: 2.16;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 31px;
+}
+
+.nav-item-link {
+  display: block;
+  padding-top: 47px;
+  padding-bottom: 47px;
+
+  color: var(--text-color);
+}
+
+.nav-btn {
+  min-width: 150px;
+  background-color: var(--main-bg-color);
+
+  margin-left: auto;
+  padding-top: 14px;
+  padding-right: 25px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+}
+/* header end */
+
+/* hero start */
+
+.hero-item {
+  display: flex;
+  background-color: var(--hero-bg-color);
+}
+
+.hero-inner {
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 154px;
+  padding-left: 162px;
+}
+
+.hero-box {
+  min-width: 433px;
+}
+
+.hero-title {
+  margin-bottom: 36px;
+  font-size: 56px;
+  line-height: 1.23;
+}
+
+.text {
+  margin-bottom: 52px;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.hero-btn {
+  min-width: 200px;
+  padding-top: 23px;
+  padding-right: 24px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  border-radius: 5px;
+}
+.hero-img {
+  margin-left: 126px;
+}
+
+.hero-sab-box {
+  min-width: 441px;
+}
+
+.hero-sab-img {
+  margin-right: 112px;
+}
+
+.hero-sab-inner {
+  width: 560px;
+  /* margin-left: auto; */
+  margin-right: auto;
+  margin-top: 164px;
+}
+
+.hero-sab-title {
+  margin-bottom: 23px;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.4;
+}
+.sab-text {
+  margin-bottom: 35px;
+}
+
+.hero-sab-btn {
+  min-width: 200px;
+  padding-top: 21px;
+  padding-right: 46px;
+  padding-bottom: 14px;
+  padding-left: 47px;
+}
+/* hero end */
+
+/* gift start */
+.gift-container {
+  width: 1190px;
+  outline: 1px solid rosybrown;
+}
+
+.gift-content {
+  padding-top: 96px;
+  padding-bottom: 137px;
+}
+
+.gift-title {
+  margin-bottom: 23px;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.gift-text {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.gift-inner {
+  display: flex;
+}
+
+.gift-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.gift-box {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  background-color: var(--third-bg-color);
+}
+
+.gift-box:hover {
+  background-color: var(--second-bg-color);
+}
+
+.gift-item-title {
+  margin-bottom: 74px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.gift-link {
+  color: var(--text-color);
+  line-height: 1.35;
+}
+/* gift end */
+
+/* signup start */
+.signup {
+  background-color: var(--accent-color);
+}
+
+.signup-container {
+  width: 1190px;
+  outline: 1px solid blueviolet;
+}
+
+.signup-inner {
+  display: flex;
+  justify-content: space-around;
+}
+/* signup end */
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, hsl(0, 100%, 30%), 75% hsl(270, 100%, 30%));
+}
