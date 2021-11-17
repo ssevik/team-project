@@ -151,33 +151,24 @@ button {
   background-color: var(--hero-bg-color);
 }
 
-.hero-inner {
-  position: relative;
-}
-
-.hero-item {
-  padding-top: 154px;
-  padding-right: 126px;
-  padding-left: 27px;
-  padding-bottom: 136px;
-
-  width: 50%;
-}
-
-.hero-left {
-  margin-left: auto;
-  padding-top: 164px;
-  padding-right: 31px;
-  padding-bottom: 107px;
-  padding-left: 112px;
-
-  width: 50%;
+.hero-flex {
+  display: flex;
 }
 
 .hero-title {
   margin-bottom: 36px;
   font-size: 56px;
   line-height: 1.23;
+}
+
+.hero-item {
+  position: relative;
+  width: 50%;
+
+  padding-top: 155px;
+  padding-right: 126px;
+  padding-left: 27px;
+  padding-bottom: 136px;
 }
 
 .hero-text {
@@ -187,22 +178,31 @@ button {
 }
 
 .hero-btn {
+  display: inline-block;
   min-width: 200px;
+
   padding-top: 23px;
   padding-right: 24px;
   padding-bottom: 15px;
   padding-left: 25px;
+
   border-radius: 5px;
 }
 
 .hero-img {
   position: absolute;
-  top: 0;
   left: 50%;
 }
 
-.hero-box {
+.hero-left {
+  position: relative;
   margin-left: auto;
+  width: 50%;
+
+  padding-top: 165px;
+  padding-right: 31px;
+  padding-bottom: 107px;
+  padding-left: 112px;
 }
 
 .hero-sab-title {
@@ -218,17 +218,19 @@ button {
 }
 
 .hero-sab-btn {
+  display: inline-block;
   min-width: 200px;
   padding-top: 21px;
   padding-right: 46px;
   padding-bottom: 14px;
   padding-left: 47px;
 }
+
 .hero-sab-img {
   position: absolute;
-  top: 0;
   right: 50%;
 }
+
 /* hero end */
 
 /* gift start */
