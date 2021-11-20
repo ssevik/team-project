@@ -9,6 +9,7 @@
   --btn-bg-color: #231f20;
   --btn-text-color: #ffffff;
   --hero-bg-color: #f1f1f2;
+  --animation-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -61,6 +62,8 @@ button {
   line-height: 1.22;
   text-align: center;
   text-transform: uppercase;
+
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 .nav-btn:hover,
@@ -70,7 +73,7 @@ button {
 .hero-btn:focus,
 .hero-sab-btn:focus {
   color: var(--second-text-color);
-  background-color: var(--accent-color);
+  box-shadow: 0 0 40px 40px var(--accent-color) inset;
 }
 
 .container {
@@ -132,6 +135,13 @@ button {
   padding-bottom: 47px;
 
   color: var(--text-color);
+
+  transition: color 300ms var(--animation-cubic-bezier);
+}
+
+.nav-item-link:hover,
+.nav-item-link:focus {
+  color: var(--accent-color);
 }
 
 .nav-btn {
@@ -262,6 +272,11 @@ button {
   display: flex;
 }
 
+.gift-item {
+  transition: background-color 300ms var(--animation-cubic-bezier),
+    filter 300ms var(--animation-cubic-bezier);
+}
+
 .gift-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -289,6 +304,25 @@ button {
   color: var(--text-color);
   line-height: 1.35;
 }
+
+.gift-svg {
+  display: inline-flex;
+  vertical-align: middle;
+
+  width: 10px;
+  height: 10px;
+
+  opacity: 0;
+  transition: transform 300ms var(--animation-cubic-bezier),
+    opacity 300ms var(--animation-cubic-bezier);
+}
+
+.gift-link:hover .gift-svg,
+.gift-link:focus .gift-svg {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* gift end */
 
 /* signup start */
@@ -338,16 +372,15 @@ button {
   color: var(--text-color);
   line-height: 1.33;
   text-transform: uppercase;
-}
 
-.signup-item:hover,
-.signup-item:focus {
-  background-color: var(--text-color);
+  transition: color 300ms var(--animation-cubic-bezier),
+    background-color 300ms var(--animation-cubic-bezier);
 }
 
 .signup-link:hover,
 .signup-link:focus {
   color: var(--btn-text-color);
+  background-color: var(--text-color);
 }
 /* signup end */
 
@@ -404,7 +437,34 @@ button {
 }
 
 .blogs-aside--link {
+  position: relative;
   color: var(--second-text-color);
+
+  transition: opacity 300ms var(--animation-cubic-bezier);
+}
+
+.blogs-card--link {
+  position: relative;
+
+  transition: opacity 300ms var(--animation-cubic-bezier);
+}
+
+.blogs-aside--link::after,
+.blogs-card--link::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 15px;
+  background-color: var(--accent-color);
+  opacity: 0;
+}
+
+.blogs-aside--link:hover::after,
+.blogs-card--link:hover::after {
+  opacity: 1;
 }
 
 .blogs-card {
@@ -416,6 +476,8 @@ button {
   padding-right: 48px;
   padding-bottom: 50px;
   padding-left: 48px;
+
+  transition: box-shadow 300ms var(--animation-cubic-bezier);
 }
 
 .blogs-card--inner:hover {
@@ -482,6 +544,8 @@ button {
 
 .footer-nav--link,
 .footer-site--link {
+  position: relative;
+
   color: var(--text-color);
 
   font-weight: 700;
@@ -492,6 +556,33 @@ button {
   margin-left: 141px;
   margin-right: 141px;
   color: var(--accent-color);
+}
+
+.footer-nav--link::before,
+.footer-site--link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+
+  left: 0;
+  bottom: -5px;
+  border-radius: 15px;
+
+  background-color: var(--accent-color);
+
+  transform: scale(0);
+  transform-origin: right;
+
+  transition: transform 300ms var(--animation-cubic-bezier);
+}
+
+.footer-nav--link:hover::before,
+.footer-nav--link:focus::before,
+.footer-site--link:hover::before,
+.footer-site--link:focus::before {
+  transform: scale(1);
+  transform-origin: left;
 }
 
 .footer-site--item:not(:last-child) {
@@ -508,8 +599,8 @@ button {
 
 .footer-socials--item {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   width: 40px;
   height: 40px;
 }
@@ -518,8 +609,26 @@ button {
   margin-right: 24px;
 }
 
+.footer-socials--link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  fill: var(--text-color);
+
+  transition: fill 300ms var(--animation-cubic-bezier);
+}
+
+.footer-socials--link:hover,
+.footer-socials--link:focus {
+  fill: var(--accent-color);
+}
+
 .footer-socials--svg {
-  display: block;
   width: 38px;
   height: 38px;
 }
